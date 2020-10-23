@@ -1,6 +1,8 @@
+import java.util.*;
+
 class TextFormatter {
 
-  private static final String text = "Lrem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy " +
+  private static final String text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy " +
           "eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et " +
           "accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
           "ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod " +
@@ -15,12 +17,27 @@ class TextFormatter {
 
   // Konstruktor
   public TextFormatter(int maxLineLength) {
-    // ...
+   // int y = maxlineLength;
+    
   }
+//Ausgabe
 
-  // Ausgabe
-  public void print(String aText) {
-    System.out.println("Hier sollte der Text mit passendem Umbruch erscheinen.");
-  }
+  	public void print(String aText) {
 
+		StringTokenizer st = new StringTokenizer(aText, " ");
+		String bText = "";
+
+		while (st.hasMoreTokens()) {
+			String nextToken = st.nextToken();
+			if (bText.length() + nextToken.length() < 30) {
+				bText += nextToken + " ";
+			}
+			else {
+				
+				System.out.print(bText);
+				System.out.print("\n");
+				bText = "";
+			}
+		}
+	}
 }
