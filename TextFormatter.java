@@ -21,7 +21,8 @@ class TextFormatter {
     
   }
 //Ausgabe
-
+/*An die Gruppe: Import von StringTokenizer, wie Ursprünglich geplant, doch möglich, somit ist die Umsetzung weniger umständlich. Grüße Rick Shaffer
+*/
   	public void print(String aText) {
 
 		StringTokenizer st = new StringTokenizer(aText, " ");
