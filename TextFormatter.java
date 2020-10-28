@@ -2,6 +2,8 @@ import java.util.*;
 
 class TextFormatter {
 
+  int maxLineLength;
+  
   private static final String text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy " +
           "eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et " +
           "accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
@@ -17,7 +19,7 @@ class TextFormatter {
 
   // Konstruktor
   public TextFormatter(int maxLineLength) {
-  
+    this.maxLineLength = maxLineLength;
   }
 //Ausgabe
 /*An Rick, mit deiner Lösung, konnten wir unseren Code deutlich entschlacken, wobei die letzten zwei Wörter und die ersten Wörter jeder Zeile gefehlt haben. Beim Lösungsversuch haben wir zwar das letzte Wort herstellen können, aber die ersten Wörter immer noch nicht. Ich habe versucht, die Tokens erst in ein Array zu packen und dann auszugeben, wobei dabei das gleiche Problem aufgetreten ist. Gegenwärtig haben wir zumindest das gleiche Resultat wie du erreicht, nur dass wir zuvor über ein Array arbeiten (in dem aber alle Tokens enthalten sind, was also nicht das Problem sein kann.) - Max
@@ -25,7 +27,7 @@ class TextFormatter {
 Anmerkung 2: Wir haben das Problem gefixt, indem wir am Ende jeder Schleife bText zum gegenwärtigen Count gemacht haben und am Ende das letzte Bisschen bText ausgegeben haben -Max
 */
 
-/* Habe auch noch mal drüber geschaut und paar Kommentare ergänzt. Sieht clean aus! Gut gemacht - Rick*/
+/* Habe auch noch mal drüber geschaut und paar Kommentare ergänzt, sowie den Konstruktor hinzugefügt. Habe den Code jetzt auch geaddet damit die finale Version bei uns im Repository steht. Sieht clean aus! Gut gemacht - Rick*/
 
   public void print(String aText) {
 
